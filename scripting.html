@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<head>
+  <title> Coldplay Beginnings</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="http://cdn.onlinewebfonts.com/svg/img_297924.png"/>
+  <style>
+
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  background-image: url("http://www.digitaljournal.com/img/8/7/3/i/2/1/7/o/Coldplay-BMW-Welt-01.jpg");
+}
+
+
+  *{
+    box-sizing:border-box
+  }
+
+  .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.myslides1{
+  min-height: 700px;
+  margin-bottom: 10px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+    header {
+      padding-top: 290px;
+      text-align: center;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Coldplay_-_Global-Citizen-Festival_Hamburg_14.jpg/1200px-Coldplay_-_Global-Citizen-Festival_Hamburg_14.jpg');
+      background-size: cover;
+      height: 500px;
+      color: white;
+      font-family: 'Lato', sans-serif;
+    }
+
+
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+      position: relative;
+      top: -170px;
+    }
+  h2{
+    position: relative;
+    top: -25px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #BDC3C7;
+  }
+
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+      min-height: 400px;
+    }
+
+    menu{
+      width: 50%;
+    	height: 50px;
+    	display: flex;
+    }
+
+
+    ul {
+      padding: 10px;
+      background: rgb(0,0,0);
+
+
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+      font-family: 'Sarabun', sans-serif;
+    	font-size: 15px;
+    	font-style: italic;
+    	font-weight: bold;
+    	list-style: none;
+    	padding: 30px 20px;
+    }
+
+    .menu li:hover{
+    	background: rgba(36, 113, 163, 0.3);
+    	color: white;
+    	cursor: pointer;
+    	transition: all 300ms;
+    }
+
+    .numbertext{
+      position: relative;
+      top: 50px;
+    }
+
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  </style>
+</head>
+<body>
+  <header>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+  </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+    <h1>Coldplay's Early Years</h1>
+    <nav class="menu">
+    <ul>
+      <li><a href="sections.html">About The Band</a></li>
+      <li><a href="3rd sample.html">Check Out Their Album!</a></li>
+      <li><a href="scripting.html">See the concerts!</a></li>
+
+    </ul>
+    </nav>
+  </header>
+
+  <article>
+    <h2>The Band Has Made Multiples Concerts</h2>
+    <div class="slideshow-container">
+      <div class="mySlides fade1">
+        <div class="numbertext">1 / 4</div>
+          <img src="https://pbs.twimg.com/media/C2jrcqmXAAAdh7q.jpg" style="width:100%">
+        <div class="text">Their First Tour Back in 2001</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="https://i.ytimg.com/vi/0eR07k6RrWc/maxresdefault.jpg" style="width:100%">
+        <div class="text">At Live 2003</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="http://www.ditchmond.com/gallery/albums/userpics/IMG_1736e.jpg" style="width:100%">
+        <div class="text">At The Twisted Tour in 2006</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="https://c1.staticflickr.com/4/3437/3381137709_799f4a5a67_b.jpg" style="width:100%">
+        <div class="text">At the VIV Tour in 2009</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+
+      </div>
+  </article>
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  }
+  </script>
+</body>

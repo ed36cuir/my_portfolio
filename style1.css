@@ -1,0 +1,310 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+header{
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+
+footer {
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+.container-content{
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+
+.logo-title{
+  display: flex;
+}
+
+.logo-title img{
+  width: 70px;
+  height: 50px;
+    margin-top: 1px;
+  margin-left: 5px;
+  padding: 3px;
+  border: 1px solid #1B2631;
+  border-radius: 50%;
+}
+
+.logo-title h4{
+  color: white;
+  font-weight: 100;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+
+
+/*cover*/
+
+.cover {
+  max-width: auto;
+  width: 100%;
+  height: 415px;
+  background-color: #F9E79F;
+  background: url(../../../../../Pictures/Camera%20Roll/parac.jpg);
+  background-size: 89%;
+  position: relative;
+  animation-name: movemente;
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes movemente {
+    from {background-position: bottom left;}
+  to {background-position: top right;}
+}
+
+@-webkit-keyframes movemente {
+    0% {background-position: bottom left;}
+    100% {background-position: top right;}
+}
+
+.gradientcover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: -webkit-linear-gradient(left, black, #FCAC2A);
+  opacity: 0.5;
+}
+.gradientdetails{
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 30px;
+  color: orange;
+}
+
+.details {
+  width: 100%;
+  max-width: 500px;
+  top: 30px;
+  left: 10px;
+  padding-right: 10px;
+}
+
+.details h2 {
+  font-size: 40px;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+}
+
+.details p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: none;
+  border-style: none;
+  border: 1px solid #FCC56C;
+  color: inherit;
+  transition: background 300ms;
+  cursor: pointer;
+}
+
+ button:hover{
+  background: white;
+  color: black;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+}
+
+article{
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 5px;
+  padding-right: 10px;
+
+}
+
+body{
+  background-image: -webkit-linear-gradient(bottom, #F7DC6F, #D68910);
+  background-image: -o-linear-gradient(bottom, #F7DC6F, #D68910);
+
+}
+
+article h1{
+  font-size: 35px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+article hr {
+  max-width: auto;
+  height: 4px;
+  border-style: inset;
+  background: -webkit-linear-gradient(left, black, #ECA22B);
+  background: -moz-linear-gradient(left, black, #ECA22B);
+  margin-top: 8px;
+}
+
+article h5 {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: normal;
+  font-family: 'Sunflower', sans-serif;
+}
+
+article ul{
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 3px;
+}
+
+a:link{
+  color: #DA8A0A;
+  font-weight: bold;
+  font-family: 'Lato';
+}
+
+a:visited{
+  color: #B47104;
+}
+
+a:hover{
+  color: #B4750F;
+}
+
+@media screen and (max-width: 500px) {
+  .details p {
+    font-size: 18px;
+  }
+}
+
+.modal{
+  display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: black; /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4;
+}
+
+
+
+.modal-content {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  max-width: 1200px;
+  -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+.modal-header {
+  position: relative;
+  background-color: #E67E22;
+  color: white;
+}
+
+.modal-body {
+  color: white;
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #E67E22;
+  color: white;
+}
+
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* The Close Button */
+.close {
+  position: relative;
+  top: -20px;
+  right: -1150px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+#img00{
+  margin-bottom: 4px;
+  border: 5px solid grey;
+  cursor: pointer;
+  height: 60px;
+  width: 100%;
+  position: relative;
+  right: -90%;
+  top: 10px;
+  z-index: 2;
+  border-radius: 50px;
+}
+
+#img01{
+  width: 100%;
+  height: 400px;
+  min-width: 665px;
+
+}

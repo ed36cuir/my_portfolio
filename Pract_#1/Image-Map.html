@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Image Map</title>
+    <style media="screen">
+      body{
+        text-align: center;
+        font-family: 'Noto Sans',  sans-serif;
+        font-style: bold;
+      }
+
+      .google{
+        height: 8px;
+        width: 8px;
+        background: purple;
+        position: relative;
+        top: -290px;
+        left: 850px;
+      }
+      #google{
+        position: relative;
+        top: -320px;
+        left: 230px;
+      }
+
+      .facebook{
+        height: 8px;
+        width: 8px;
+        background: blue;
+        position: relative;
+        top: -320px;
+        left: 850px;
+      }
+      #facebook{
+        position: relative;
+        top: -350px;
+        left: 230px;
+      }
+
+      .youtube{
+        height: 8px;
+        width: 8px;
+        background: red;
+        position: relative;
+        top: -350px;
+        left: 850px;
+      }
+      #youtube{
+        position: relative;
+        top: -380px;
+        left: 230px;
+      }
+
+      .baidu{
+        height: 8px;
+        width: 8px;
+        background: red;
+        position: relative;
+        top: -380px;
+        left: 850px;
+      }
+      #baidu{
+        position: relative;
+        top: -410px;
+        left: 230px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Data</h1>
+
+    <img src="Untitled.png" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="_blank" alt="Google.com" title="Google.com" href="https://google.com" coords="396,32,311,65,272,163,308,252,398,293" shape="poly">
+        <area target="_blank" alt="Facebook.com" title="Facebook.com" href="https://facebook.com" coords="401,29,471,50,509,96,529,144,528,187,401,160" shape="poly">
+        <area target="_blank" alt="Youtube.com" title="Youtube.com" href="https://youtube.com" coords="529,193,508,236,457,279,403,165" shape="poly">
+        <area target="_blank" alt="Baidu.com" title="Baidu.com" href="https://www.baidu.com/" coords="455,279,427,290,400,289,401,166" shape="poly">
+    </map>
+
+    <div class="google">
+    </div>
+    <p id="google">Google</p>
+
+    <div class="facebook">
+    </div>
+    <p id="facebook">Facebook</p>
+
+    <div class="youtube">
+    </div>
+    <p id="youtube">Youtube</p>
+
+    <div class="baidu">
+    </div>
+    <p id="baidu">Baidu</p>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  	<script type="text/javascript" src="../js/imageMapResizer.min.js"></script>
+  	<script type="text/javascript">
+
+
+      !function(){"use strict";function a(){function a(){function a(a,d){function e(a){var d=1===(f=1-f)?"width":"height";return c[d]+Math.floor(Number(a)*b[d])}var f=0;j[d].coords=a.split(",").map(e).join(",")}var b={width:l.width/l.naturalWidth,height:l.height/l.naturalHeight},c={width:parseInt(window.getComputedStyle(l,null).getPropertyValue("padding-left"),10),height:parseInt(window.getComputedStyle(l,null).getPropertyValue("padding-top"),10)};k.forEach(a)}function b(a){return a.coords.replace(/ *, */g,",").replace(/ +/g,",")}function c(){clearTimeout(m),m=setTimeout(a,250)}function d(){l.width===l.naturalWidth&&l.height===l.naturalHeight||a()}function e(){l.addEventListener("load",a,!1),window.addEventListener("focus",a,!1),window.addEventListener("resize",c,!1),window.addEventListener("readystatechange",a,!1),document.addEventListener("fullscreenchange",a,!1)}function f(){return"function"==typeof i._resize}function g(a){return document.querySelector('img[usemap="'+a+'"]')}function h(){j=i.getElementsByTagName("area"),k=Array.prototype.map.call(j,b),l=g("#"+i.name)||g(i.name),i._resize=a}var i=this,j=null,k=null,l=null,m=null;f()?i._resize():(h(),e(),d())}function b(){function b(a){if(!a.tagName)throw new TypeError("Object is not a valid DOM element");if("MAP"!==a.tagName.toUpperCase())throw new TypeError("Expected <MAP> tag, found <"+a.tagName+">.")}function c(c){c&&(b(c),a.call(c),d.push(c))}var d;return function(a){switch(d=[],typeof a){case"undefined":case"string":Array.prototype.forEach.call(document.querySelectorAll(a||"map"),c);break;case"object":c(a);break;default:throw new TypeError("Unexpected data type ("+typeof a+").")}return d}}"function"==typeof define&&define.amd?define([],b):"object"==typeof module&&"object"==typeof module.exports?module.exports=b():window.imageMapResize=b(),"jQuery"in window&&(jQuery.fn.imageMapResize=function(){return this.filter("map").each(a).end()})}();
+      //# sourceMappingURL=imageMapResizer.map
+
+  		$('map').imageMapResize();
+
+  	</script>
+  </body>
+</html>

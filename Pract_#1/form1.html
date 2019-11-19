@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Forms</title>
+
+    <style media="screen">
+
+    body{
+      background-color: #f2f2f2;
+      font-family: 'Open Sans', sans-serif;
+    }
+    p, th
+    {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    p{
+      text-align: center;
+    }
+
+      input[type=text], input[type=email],input[type=number], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #3498EB;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 5px;
+    }
+
+    .names{
+      width: 67%;
+      background: #DFF9F9;
+    }
+
+    #survey-form label{
+      display:block;
+	margin-bottom: 10px;
+    }
+    #survey-form label > div{
+      float: left;
+    	width: 100px;
+    	color: #F072A9;
+    	font-weight: bold;
+    	font-size: 13px;
+    	text-shadow: 1px 1px 1px #fff;
+      padding: 10px;
+    }
+
+    #survey-form fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	background: #E6F9F9;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+
+#survey-form legend{
+  color: #FFA0C9;
+  border-top: 1px solid #FFD2D2;
+  border-left: 1px solid #FFD2D2;
+  border-right: 1px solid #FFD2D2;
+	border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+  background: #FFF4F4;
+	padding: 0px 8px 3px 8px;
+  box-shadow: -0px -1px 2px #F1F1F1;
+  -moz-box-shadow:-0px -1px 2px #F1F1F1;
+	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+  font-weight: bold;
+	font-size: 15px;
+}
+
+.form-style-3 textarea{
+	width:250px;
+	height:100px;
+}
+    </style>
+
+  </head>
+  <body>
+
+      <h1 id="title">Survey Form</h1>
+  <div id="form-outer">
+    <p id="description" style="font-style: italic">
+      Talk about what we can improve!
+    </p>
+    <form id="survey-form" action="index.html" method="post">
+      <fieldset>
+        <legend>Details</legend>
+        <div class="names">
+          <label id="name-label" for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Write your name" required>
+          <label for="email" id="email-label">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Write your name" required>
+          <label for="number">Your Age:</label>
+          <input type="number" name="number" id="number" placeholder="Write your age" min="1" max="125">
+      </div>
+      </fieldset>
+    </form>
+    </form>
+  </div>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Music!</title>
+    <style media="screen">
+      body{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <iframe src="silence.mp3"  id="audio" style="display:none"></iframe>
+    <audio id="so" src="Alison - Space Echo.mp3" controls loop onloadeddata="low()" controls>
+      <source src="Alison - Space Echo.mp3" type="audio/mp3">
+    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+  </audio>
+
+
+    <iframe id="video"onclick="vid" width="560" height="315"
+    src="https://www.youtube.com/embed/kwLTw8F8yN8" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen ></iframe>
+
+    <script type="text/javascript">
+      var song = document.getElementById('so')
+
+      function low(){
+        song.volume = 0.2;
+      }
+
+      function stop(){
+        song.pause();
+        song.currentTime = 0;
+      }
+    </script>
+  </body>
+</html>
